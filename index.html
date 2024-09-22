@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelvin portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="flex flex-col max-h-fit">
+    <header
+      class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-between font-mono top-0 pl-10"
+    >
+      <div>
+        <h1 class="font-serif font-extrabold">kelvin Empire</h1>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row md:flex-row lg: gap-10 font-serif pr-10"
+      >
+        <p>Home</p>
+        <p>project</p>
+        <p>content</p>
+      </div>
+    </header>
+    <main>
+      <div class="border-b-2">
+        <h1 class="flex justify-center font-serif text-3xl/8 py-8 font-bold">
+          Discover + 40 projects that i made with ❤️
+        </h1>
+      </div>
+      <div
+        class="flex flex-col text-center sm:flex-row md: gap-10 justify-center pt-8 font-bold"
+      >
+        <p class="bg-black text-white px-4">ALL PROJECTS</p>
+        <p>WEB/MOBILE DEVELOPMENT</p>
+        <p>UI/UX DESIGN</p>
+        <p>BRANDING</p>
+      </div>
+      <div class="grid grid-rows-3 sm:grid-cols-3 md: gap-5 m-5">
+        <div>
+          <div class="bg-gray-300 text-center">
+            <p class="text-xs font-semibold pt-10">Web Development</p>
+            <h1 class="px-5 pb-5 font-semibold">
+              bringing the Kelvin Empire <br />
+              to western African
+            </h1>
+            <img
+              class="h-36 w-96 px-10"
+              src="./image/Screenshot 2024-09-14 085821.png"
+              alt=""
+            />
+          </div>
+          <div class="h-16 bg-gray-300 mt-4 rounded shadow-md">
+            <form>
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-semibold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                  placeholder="Your Name"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div class="bg-gray-300 text-center">
+            <p class="text-blue-400 text-xs font-semibold pt-10">
+              Web Development
+            </p>
+            <h1 class="font-semibold px-5 pb-5">
+              Realize Your Dream and<br />
+              Build your new World
+            </h1>
+            <img
+              class="h-36 w-96 px-10"
+              src="./image/Screenshot 2024-09-22 082523.png"
+              alt=""
+            />
+          </div>
+          <div class="h-16 bg-gray-300 mt-4 rounded shadow-md">
+            <form>
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                  placeholder="Your Email"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div class="bg-gray-300 text-center">
+            <p class="text-red-900 text-xs font-semibold pt-10">
+              Web Development
+            </p>
+            <h1 class="font-semibold px-5 pb-5">
+              A job that meets <br />
+              your requirements.
+            </h1>
+            <video
+              class="h-36 w-96 px-5"
+              src="./image/Screen Recording 2024-09-22 065812.mp4"
+              controls
+              height="300"
+              width="300"
+              autoplay
+              loop
+            ></video>
+          </div>
+          <div class="h-16 bg-gray-300 mt-4 rounded shadow-md">
+            <form>
+              <div class="mb-4">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex flex-col sm:flex-row md:justify-center bg-fixed gap-6">
+      <div>
+        <i class="fa-regular fa-copyright"></i>
+        This disgn was created by kelvin on the 22nd of september 2024
+      </div>
+      <div class="flext justify-around gap-10">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </div>
+    </footer>
+  </body>
+</html>

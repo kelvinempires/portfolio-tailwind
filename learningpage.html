@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="flex flex-col bg-slate-500 items-center justify-center h-screen font-mono">
+    <main class="h-fit gap-10 bg-white w-[40rem] relative flex items-center p-6">
+      <div
+        class="before:bg-black z-0 before:top-0 before:left-0 before:absolute before:w-full before:h-[50%]"
+      ></div>
+      <div>
+        <img
+          src="https://tailwindcss.com/_next/static/media/retro-shoe.24e25785.jpg"
+          alt=""
+          class="h-[18rem] relative"
+        />
+      </div>
+      <div class="relative flex flex-col justify-between h-full text-white">
+        <div> 
+          <h1 class="text-2xl font-semibold">Restor shoe</h1>
+          <div class="flex gap-2">
+            <p>$89.00</p>
+            <p class="text-[#2dd4bf]">IN STOCK</p>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-col gap-2 text-black">
+            <div class="flex gap-5 *:p-3 *:border *:">
+            <span>XL</span>
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+            <span>XL</span>
+            </div>
+          </div>
+          <div>
+            <button>buy now</button>
+            <button>add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <p>footer texts</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
