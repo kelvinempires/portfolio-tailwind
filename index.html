@@ -13,32 +13,40 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <script src="script.js" defer></script>
   </head>
   <body class="flex flex-col max-h-fit">
     <header
       class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-between font-mono top-0 pl-10"
     >
-      <div>
-        <h1 class="font-serif font-extrabold">kelvin Empire</h1>
+      <div class="flex gap-4 bg-slate-300 fixed top-0 left-0-0">
+        <h1 class="pl-2 font-serif font-extrabold">kelvin Empire</h1>
+        <div class="border border-slate-400 rounded">
+          <input type="text" id="search" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <ul id="results"></ul>
+        </div>
       </div>
+
       <div
-        class="flex flex-col sm:flex-row md:flex-row lg: gap-10 font-serif pr-10"
+        class="flex flex-col sm:flex-row md:flex-row lg: gap-10 font-serif pr-10 fixed right-0 top-0"
       >
-        <p>Home</p>
-        <p>project</p>
-        <p>content</p>
+        <p class="navRight">Home</p>
+        <p class="navRight">project</p>
+        <a href="../condent/social-links-profile-main/"
+          ><p class="navRight">content</p></a
+        >
+        <button id="toggleButton" class="toggle-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+        <!-- <div id="content">
+          <p>This is your content area.</p>
+        </div> -->
       </div>
     </header>
     <main>
       <div class="border-b-2">
-        <h1 class="flex justify-center font-serif text-3xl/8 py-8 font-bold">
+        <h1 class="flex justify-center font-serif text-3xl/8 py-10 font-bold">
           Discover + 40 projects that i made with ❤️
         </h1>
       </div>
@@ -50,113 +58,608 @@
         <p>UI/UX DESIGN</p>
         <p>BRANDING</p>
       </div>
-      <div class="grid grid-rows-3 sm:grid-cols-3 md: gap-5 m-5">
-        <div>
-          <div class="bg-gray-300 text-center">
-            <p class="text-xs font-semibold pt-10">Web Development</p>
-            <h1 class="px-5 pb-5 font-semibold">
-              bringing the Kelvin Empire <br />
-              to western African
-            </h1>
-            <img
-              class="h-36 w-96 px-10"
-              src="./image/Screenshot 2024-09-14 085821.png"
-              alt=""
-            />
-          </div>
-          <div class="h-16 bg-gray-300 mt-4 rounded shadow-md">
-            <form>
-              <div class="mb-4">
-                <label for="name" class="block text-gray-700 font-semibold mb-2"
-                  >Name</label
+
+      <div class="container">
+        <div class="slider-wrapper">
+          <button id="prev-slide" class="slide-button material-symbols-rounded">
+            <!-- chevron_left --><i class="fa-solid fa-angle-left"></i>
+          </button>
+          <ul class="image-list">
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-xs font-semibold pt-10 text-orange-500">
+                  Web Development
+                </p>
+                <h1 class="px-5 pb-5 font-semibold">
+                  bringing the Kelvin Empire <br />
+                  to western African
+                </h1>
+                <a
+                  target="_blank"
+                  referrerpolicy="no-referrer"
+                  href="../js4/js-cart/index.html"
                 >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
-                  placeholder="Your Name"
-                />
+                  <video
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/cart video.mp4"
+                    height="300"
+                    width="300"
+                    autoplay
+                    loop
+                  ></video>
+                </a>
               </div>
-            </form>
-          </div>
-        </div>
-        <div>
-          <div class="bg-gray-300 text-center">
-            <p class="text-blue-400 text-xs font-semibold pt-10">
-              Web Development
-            </p>
-            <h1 class="font-semibold px-5 pb-5">
-              Realize Your Dream and<br />
-              Build your new World
-            </h1>
-            <img
-              class="h-36 w-96 px-10"
-              src="./image/Screenshot 2024-09-22 082523.png"
-              alt=""
-            />
-          </div>
-          <div class="h-16 bg-gray-300 mt-4 rounded shadow-md">
-            <form>
-              <div class="mb-4">
-                <label
-                  for="email"
-                  class="block text-gray-700 font-semibold mb-2"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
-                  placeholder="Your Email"
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-        <div>
-          <div class="bg-gray-300 text-center">
-            <p class="text-red-900 text-xs font-semibold pt-10">
-              Web Development
-            </p>
-            <h1 class="font-semibold px-5 pb-5">
-              A job that meets <br />
-              your requirements.
-            </h1>
-            <video
-              class="h-36 w-96 px-5"
-              src="./image/Screen Recording 2024-09-22 065812.mp4"
-              controls
-              height="300"
-              width="300"
-              autoplay
-              loop
-            ></video>
-          </div>
-          <div class="h-16 bg-gray-300 mt-4 rounded shadow-md">
-            <form>
-              <div class="mb-4">
-                <label
-                  for="message"
-                  class="block text-gray-700 font-semibold mb-2"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
-                  placeholder="Your Message"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
               >
-                Submit
-              </button>
-            </form>
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-blue-400 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  Realize Your Dream and<br />
+                  Build your new World
+                </h1>
+                <a href="../bostrap/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-09-22 082523.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-red-900 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  A job that meets <br />
+                  your requirements.
+                </h1>
+                <a href="../fronEnd-form/index.html">
+                  <video
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screen Recording 2024-10-12 164507.mp4"
+                    height="300"
+                    width="300"
+                    autoplay
+                    loop
+                  ></video>
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 hover:text-gray-800 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-xs font-semibold pt-10">Web Development</p>
+                <h1 class="px-5 pb-5 font-semibold">
+                  bringing the Kelvin Empire <br />
+                  to western African
+                </h1>
+                <a href="https://kelvinempires.github.io/harvestGrove/">
+                  <video
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screen Recording 2024-10-12 173549.mp4"
+                    height="300"
+                    width="300"
+                    autoplay
+                    loop
+                  ></video>
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-indigo-700 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  Realize Your Dream and<br />
+                  Build your new World
+                </h1>
+                <a href="../2nDOM/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-10-12 135648.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-xs font-semibold pt-10 text-lime-800">
+                  Web Development
+                </p>
+                <h1 class="px-5 pb-5 font-semibold">
+                  bringing the Kelvin Empire <br />
+                  to western African
+                </h1>
+                <a href="../image slider/index.html">
+                  <video
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screen Recording 2024-10-12 165201.mp4"
+                    height="300"
+                    width="300"
+                    autoplay
+                    loop
+                  ></video>
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-slate-700 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  Realize Your Dream and<br />
+                  Build your new World
+                </h1>
+                <a href="../product-preview-card-component-main/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-10-12 180847.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-purple-800 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  A job that meets <br />
+                  your requirements.
+                </h1>
+                <video
+                  class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                  src="./image/Screen Recording 2024-09-22 065812.mp4"
+                  height="300"
+                  width="300"
+                  autoplay
+                  loop
+                ></video>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 hover:text-gray-800 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-green-800 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="px-5 pb-5 font-semibold">
+                  bringing the Kelvin Empire <br />
+                  to western African
+                </h1>
+                <img
+                  class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                  src="./image/Screenshot 2024-09-14 085821.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-violet-950 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  Realize Your Dream and<br />
+                  Build your new World
+                </h1>
+                <a href="../js4/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-10-12 175627.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-rose-400 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="px-5 pb-5 font-semibold">
+                  bringing the Kelvin Empire <br />
+                  to western African
+                </h1>
+                <a href="../tailwindcss/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-10-12 183011.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-yellow-600 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  Realize Your Dream and<br />
+                  Build your new World
+                </h1>
+                <a href="../bostrap/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-09-22 082523.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-fuchsia-800 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  A job that meets <br />
+                  your requirements.
+                </h1>
+                <video
+                  class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                  src="./image/Screen Recording 2024-09-22 065812.mp4"
+                  height="300"
+                  width="300"
+                  autoplay
+                  loop
+                ></video>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 hover:text-gray-800 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-xs font-semibold pt-10 text-amber-950">
+                  Web Development
+                </p>
+                <h1 class="px-5 pb-5 font-semibold">
+                  bringing the Kelvin Empire <br />
+                  to western African
+                </h1>
+                <a href="../qr-code-component-main/index.html">
+                  <img
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screenshot 2024-10-12 181656.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-item">
+              <div class="bg-gray-300 hover:bg-gray-400 text-center">
+                <p class="text-sky-800 text-xs font-semibold pt-10">
+                  Web Development
+                </p>
+                <h1 class="font-semibold px-5 pb-5">
+                  Realize Your Dream and<br />
+                  Build your new World
+                </h1>
+                <a href="../color-changer/index.html">
+                  <video
+                    class="h-36 w-96 px-5 hover:h-36 hover:w-105 hover:px-2 transition-all duration-500"
+                    src="./image/Screen Recording 2024-10-12 163538.mp4"
+                    height="300"
+                    width="300"
+                    autoplay
+                    loop
+                  ></video>
+                </a>
+              </div>
+              <div
+                class="h-16 bg-gray-300 hover:bg-gray-400 mt-4 rounded shadow-md"
+              >
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 font-semibold mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </ul>
+          <button id="next-slide" class="slide-button material-symbols-rounded">
+            <!-- chevron_right --><i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
           </div>
         </div>
       </div>
