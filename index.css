@@ -92,6 +92,9 @@ color: gray;
   height: 400px;
   object-fit: cover;
 }
+.container{
+  margin-top: 30px;
+}
 
 .container .slider-scrollbar {
   height: 24px;
